@@ -1,0 +1,90 @@
+.SplashPage_Container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #ffffff 0%, #edf2f7 100%);
+    text-align: center;
+    padding: 3em 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+.SplashPage_Content {
+    max-width: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+    z-index: 1;
+}
+
+.SplashPage_Title {
+    font-size: 2.4em;
+    font-weight: 800;
+    color: #2D2E3A;
+    margin: 0 0 1.5em 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.SplashPage_Logo {
+    width: 15em;
+    height: 18em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -1em 0;
+}
+
+.SplashPage_Logo img {
+    width: 100%;
+    height: auto;
+}
+
+.SplashPage_Description {
+    font-size: 1.1em;
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+.SplashPage_Button {
+    background: linear-gradient(90deg, #6366F1, #D946EF);
+    color: white;
+    border: none;
+    width: 100%;
+    max-width: 20em;
+    padding: 1.2em;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px -5px rgba(217, 70, 239, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.SplashPage_Button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(217, 70, 239, 0.5);
+    filter: brightness(1.1);
+}
+
+.SplashPage_Button:active {
+    transform: translateY(0);
+}
+
+/* Background circles for extra detail from image */
+.SplashPage_Container::after {
+    content: '';
+    position: absolute;
+    width: 40em;
+    height: 40em;
+    background: radial-gradient(circle, rgba(226, 232, 240, 0.3) 0%, transparent 70%);
+    top: -10em;
+    right: -10em;
+    border-radius: 50%;
+    z-index: 0;
+}

@@ -1,0 +1,147 @@
+.ProfilePage_Container {
+    padding-bottom: 8em;
+    min-height: 100vh;
+    background-color: #f8f9ff;
+}
+
+.ProfilePage_Header {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    padding: 6.5em 2em 7.5em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 0 0 5em 5em;
+    /* Redondeo profundo */
+    box-shadow: 0 1em 3em rgba(65, 88, 208, 0.15);
+    z-index: 1;
+}
+
+.ProfilePage_Avatar {
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.8em solid rgba(255, 255, 255, 0.3);
+    /* Borde semitransparente */
+    box-shadow: 0 1.5em 3.5em rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.ProfilePage_Avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProfilePage_Name {
+    margin-top: 2em;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+}
+
+.ProfilePage_Settings {
+    position: absolute;
+    top: 4em;
+    right: 2.5em;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 1.2em;
+    border-radius: 1.5em;
+    cursor: pointer;
+    color: white;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.ProfilePage_Menu {
+    padding: 0 2.5em;
+    margin-top: -3.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    position: relative;
+    /* Para el z-index */
+    z-index: 5;
+    /* Asegura que esté por encima del header */
+}
+
+.ProfilePage_MenuItem {
+    background: white;
+    border-radius: 2.5em;
+    padding: 2em 1.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.02);
+    /* Sombra casi invisible */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ProfilePage_MenuItem:active {
+    transform: scale(0.96);
+    background: #fcfcfc;
+}
+
+.ProfilePage_MenuLeft {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.ProfilePage_MenuIcon {
+    background: #f0f3ff;
+    padding: 1em;
+    border-radius: 1.5em;
+    color: #4158D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfilePage_MenuItem span {
+    font-weight: 800;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.ProfilePage_Stats {
+    background: white;
+    border-radius: 3em;
+    padding: 2.8em;
+    box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.02);
+    margin: 2em 2.5em 0 2.5em;
+    cursor: pointer;
+}
+
+.ProfilePage_StatHeader h3 {
+    margin: 0 0 1.5em 0;
+    font-size: 1.4em;
+    font-weight: 800;
+    color: #333;
+}
+
+.ProfilePage_ProgressBar {
+    height: 1.2em;
+    background: #f4f6ff;
+    border-radius: 2em;
+    overflow: hidden;
+    margin-bottom: 1.2em;
+}
+
+.ProfilePage_ProgressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #4158D0, #C850C0);
+    border-radius: 2em;
+}
+
+.ProfilePage_StatFooter {
+    text-align: right;
+    color: #ddd;
+    font-size: 1em;
+    font-weight: 800;
+}

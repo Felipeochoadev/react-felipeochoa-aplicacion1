@@ -1,0 +1,50 @@
+.TabBar_Container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    /* Igual que el #root */
+    height: 6em;
+    /* Un poco más alta */
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -1em 3em rgba(0, 0, 0, 0.04);
+    border-radius: 2.5em 2.5em 0 0;
+    /* Más redondeado */
+    z-index: 1000;
+    padding: 0 1em;
+}
+
+.TabBar_Item {
+    background: none;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.8em;
+    border-radius: 1.5em;
+}
+
+.TabBar_Item.active {
+    color: #4158D0;
+    background: rgba(65, 88, 208, 0.05);
+    /* Sutil fondo para el ítem activo */
+}
+
+.TabBar_Item:active {
+    transform: scale(0.9);
+}
+
+/* Ocultar en escritorio */
+@media screen and (min-width: 768px) {
+    .TabBar_Container {
+        display: none;
+    }
+}

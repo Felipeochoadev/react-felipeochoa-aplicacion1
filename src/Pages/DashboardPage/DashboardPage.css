@@ -1,0 +1,168 @@
+.DashboardPage_Container {
+    padding: 2.5em 2em;
+    padding-bottom: 8em;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+    /* Blanco casi puro */
+}
+
+.DashboardPage_Header {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    margin-bottom: 2.5em;
+}
+
+.DashboardPage_SearchContainer {
+    flex: 1;
+    background: white;
+    border-radius: 1.2em;
+    padding: 1em 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.05);
+    /* Sombra más suave y moderna */
+}
+
+.DashboardPage_SearchContainer input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1.1em;
+    width: 100%;
+    color: #333;
+}
+
+.DashboardPage_SearchContainer input::placeholder {
+    color: #ccc;
+}
+
+.DashboardPage_IconBtn {
+    background: white;
+    border: none;
+    padding: 1em;
+    border-radius: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.05);
+    color: #4158D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DashboardPage_Banner {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    border-radius: 2.5em;
+    /* Más redondeado según imagen */
+    padding: 2.5em;
+    color: white;
+    margin-bottom: 3em;
+    min-height: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1em 2.5em rgba(65, 88, 208, 0.2);
+}
+
+.DashboardPage_Banner h2 {
+    font-size: 2em;
+    font-weight: 800;
+    margin: 0 0 0.4em 0;
+    letter-spacing: 0.02em;
+}
+
+.DashboardPage_Banner p {
+    font-size: 1em;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.DashboardPage_SectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.DashboardPage_SectionHeader h3 {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #333;
+    margin: 0;
+}
+
+.DashboardPage_.TabBar_Container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    /* Igual al max-width del #root */
+    height: 6em;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -1em 3em rgba(0, 0, 0, 0.04);
+    border-radius: 2.5em 2.5em 0 0;
+    z-index: 1000;
+    padding: 0 1em;
+}
+
+.DashboardPage_Link {
+    background: none;
+    border: none;
+    color: #999;
+    /* Color más discreto según imagen */
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.DashboardPage_Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+    .DashboardPage_Grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.DashboardPage_Card {
+    background: white;
+    border-radius: 2em;
+    /* Más redondeado */
+    padding: 2.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s;
+}
+
+.DashboardPage_Card:active {
+    transform: scale(0.95);
+}
+
+.DashboardPage_CardIcon {
+    width: 4.5em;
+    height: 4.5em;
+    border-radius: 1.5em;
+    /* Ajustado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DashboardPage_Card span {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #333;
+}

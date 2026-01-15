@@ -1,0 +1,104 @@
+.LessonListPage_Container {
+    padding-bottom: 8em;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+.LessonListPage_Header {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    padding: 4em 2em 3.5em 2em;
+    border-radius: 0 0 3.5em 3.5em;
+    /* Redondeo profundo */
+    position: relative;
+    margin-bottom: 2em;
+    box-shadow: 0 1em 2em rgba(65, 88, 208, 0.1);
+}
+
+.LessonListPage_Back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.LessonListPage_Hero {
+    display: flex;
+    align-items: center;
+    gap: 1.8em;
+}
+
+.LessonListPage_Icon {
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    border-radius: 1.5em;
+}
+
+.LessonListPage_HeroText h2 {
+    color: white;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.LessonListPage_HeroText span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.LessonListPage_List {
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.LessonListPage_Item {
+    background: white;
+    padding: 1.8em 1.5em;
+    border-radius: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.LessonListPage_Item:active {
+    transform: scale(0.97);
+}
+
+.LessonListPage_Item.active {
+    background: #f8faff;
+    border-left: 0.4em solid #4158D0;
+}
+
+.LessonListPage_ItemNumber {
+    font-weight: 800;
+    color: #ddd;
+    font-size: 1.2em;
+    width: 3em;
+}
+
+.LessonListPage_ItemInfo {
+    flex: 1;
+}
+
+.LessonListPage_ItemInfo h4 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+}
+
+.LessonListPage_ItemHours {
+    color: #bbb;
+    font-size: 0.85em;
+    font-weight: bold;
+}

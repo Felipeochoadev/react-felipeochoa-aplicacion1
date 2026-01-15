@@ -1,0 +1,140 @@
+.Sidebar_Container {
+    width: 280px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em 1.5em;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.Sidebar_Logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    margin-bottom: 4em;
+    padding-left: 0.5em;
+}
+
+.Sidebar_LogoIcon {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5em 1.5em rgba(65, 88, 208, 0.2);
+}
+
+.Sidebar_Logo span {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: #333;
+    letter-spacing: -0.02em;
+}
+
+.Sidebar_Nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    flex: 1;
+}
+
+.Sidebar_NavItem {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    padding: 1.2em 1.5em;
+    border: none;
+    background: transparent;
+    color: #888;
+    border-radius: 1.5em;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.2s ease;
+}
+
+.Sidebar_NavItem:hover {
+    background: #f8f9ff;
+    color: #4158D0;
+}
+
+.Sidebar_NavItem.active {
+    background: #f0f3ff;
+    color: #4158D0;
+}
+
+.Sidebar_NavItem span {
+    font-family: inherit;
+}
+
+.Sidebar_Footer {
+    border-top: 1px solid #f8f8f8;
+    padding-top: 2em;
+}
+
+.Sidebar_UserProfile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1.2em;
+    margin-bottom: 1em;
+    background: #fcfcfc;
+    border-radius: 1.5em;
+}
+
+.Sidebar_UserProfile img {
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 1em;
+    object-fit: cover;
+}
+
+.Sidebar_UserInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar_UserName {
+    font-weight: 800;
+    font-size: 1.05em;
+    color: #333;
+}
+
+.Sidebar_UserRole {
+    font-size: 0.85em;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.Sidebar_LogoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    padding: 1.2em 1.5em;
+    background: #fffafa;
+    border: none;
+    color: #ff5e5e;
+    border-radius: 1.5em;
+    cursor: pointer;
+    font-weight: 800;
+    transition: background 0.2s;
+}
+
+.Sidebar_LogoutBtn:hover {
+    background: #fff0f0;
+}
+
+/* Ocultar en móvil */
+@media screen and (max-width: 767px) {
+    .Sidebar_Container {
+        display: none;
+    }
+}

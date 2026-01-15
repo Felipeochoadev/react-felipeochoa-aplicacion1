@@ -1,0 +1,144 @@
+.ReviewsPage_Container {
+    padding-bottom: 8em;
+    min-height: 100vh;
+    background-color: #f8f9ff;
+}
+
+.ReviewsPage_Header {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    padding: 4.5em 2em 4em 2em;
+    border-radius: 0 0 3.5em 3.5em;
+    color: white;
+    box-shadow: 0 1em 2em rgba(65, 88, 208, 0.1);
+}
+
+.ReviewsPage_Back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2em;
+    display: flex;
+}
+
+.ReviewsPage_Hero {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.ReviewsPage_HeroText h3 {
+    margin: 0 0 0.3em 0;
+    font-size: 1.6em;
+    font-weight: 800;
+}
+
+.ReviewsPage_HeroText p {
+    margin: 0.4em 0;
+    font-size: 0.85em;
+    font-weight: 700;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.ReviewsPage_Stars {
+    display: flex;
+    gap: 0.3em;
+}
+
+.ReviewsPage_Content {
+    padding: 0 2em;
+    margin-top: -2em;
+    /* Elevación sobre cabecera */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.ReviewsPage_Description {
+    background: white;
+    padding: 2.5em;
+    border-radius: 2.5em;
+    box-shadow: 0 1em 3em rgba(0, 0, 0, 0.05);
+}
+
+.ReviewsPage_Description h4 {
+    margin: 0 0 1em 0;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: #333;
+}
+
+.ReviewsPage_Description p {
+    font-size: 1em;
+    color: #888;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.ReviewsPage_List {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+}
+
+.ReviewsPage_Item {
+    background: white;
+    padding: 2em;
+    border-radius: 2.5em;
+    box-shadow: 0 1em 3em rgba(0, 0, 0, 0.03);
+}
+
+.ReviewsPage_ItemHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.ReviewsPage_Avatar {
+    width: 3.5em;
+    height: 3.5em;
+    background: #f0f2ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ReviewsPage_Avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ReviewsPage_ItemInfo {
+    flex: 1;
+}
+
+.ReviewsPage_ItemInfo h5 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #333;
+}
+
+.ReviewsPage_ItemStars {
+    display: flex;
+    gap: 0.2em;
+    margin-top: 0.3em;
+}
+
+.ReviewsPage_ItemDate {
+    font-size: 0.7em;
+    color: #ddd;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ReviewsPage_ItemComment {
+    font-size: 1em;
+    color: #888;
+    line-height: 1.6;
+    margin: 0;
+}

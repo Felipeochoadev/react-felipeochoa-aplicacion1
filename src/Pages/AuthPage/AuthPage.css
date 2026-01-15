@@ -1,0 +1,117 @@
+.AuthPage_Container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    color: white;
+}
+
+.AuthPage_Header {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding: 4em 0 2em 0;
+}
+
+.AuthPage_Tab {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.6em;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    transition: color 0.3s;
+    position: relative;
+    letter-spacing: 0.05em;
+}
+
+.AuthPage_Tab.active {
+    color: white;
+}
+
+.AuthPage_Tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    right: 1em;
+    height: 0.15em;
+    background: white;
+    border-radius: 1em;
+}
+
+.AuthPage_Form {
+    background: white;
+    border-radius: 3em 3em 0 0;
+    /* Mayor redondeo superior */
+    flex: 1;
+    padding: 4em 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    color: #333;
+    box-shadow: 0 -1em 3em rgba(0, 0, 0, 0.1);
+}
+
+.AuthPage_InputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.AuthPage_InputGroup label {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.AuthPage_InputGroup input {
+    border: none;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 0.8em 0;
+    font-size: 1.1em;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.AuthPage_InputGroup input:focus {
+    border-color: #4158D0;
+}
+
+.AuthPage_Checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    font-size: 0.9em;
+    color: #999;
+    margin-top: -1em;
+}
+
+.AuthPage_Checkbox input {
+    accent-color: #4158D0;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.AuthPage_Submit {
+    background: linear-gradient(90deg, #4158D0, #C850C0);
+    color: white;
+    border: none;
+    padding: 1.3em;
+    border-radius: 1.2em;
+    font-weight: 800;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 1em;
+    box-shadow: 0 0.8em 2em rgba(65, 88, 208, 0.3);
+    transition: transform 0.2s;
+    letter-spacing: 0.1em;
+}
+
+.AuthPage_Submit:active {
+    transform: scale(0.97);
+}

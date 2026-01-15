@@ -1,0 +1,101 @@
+.SearchPage_Container {
+    padding-bottom: 8em;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+.SearchPage_Header {
+    background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    padding: 4.5em 2em 3em 2em;
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    border-radius: 0 0 3.5em 3.5em;
+    /* Mayor redondeo inferior */
+    margin-bottom: 3em;
+    box-shadow: 0 1em 2em rgba(65, 88, 208, 0.15);
+}
+
+.SearchPage_SearchWrapper {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.25);
+    /* Efecto cristal más marcado */
+    border-radius: 1.2em;
+    padding: 1em 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    backdrop-filter: blur(5px);
+}
+
+.SearchPage_SearchWrapper input {
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.SearchPage_SearchWrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.SearchPage_Bell {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.SearchPage_Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    padding: 0 2em;
+}
+
+@media screen and (min-width: 768px) {
+    .SearchPage_Grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.SearchPage_Card {
+    background: white;
+    border-radius: 2em;
+    /* Más redondeado */
+    padding: 2.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8em;
+    box-shadow: 0 0.8em 2.5em rgba(0, 0, 0, 0.05);
+    /* Sombra más profunda */
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.SearchPage_Card:active {
+    transform: scale(0.95);
+}
+
+.SearchPage_CardIcon {
+    opacity: 0.9;
+    background: #f8f9ff;
+    padding: 1em;
+    border-radius: 1.2em;
+}
+
+.SearchPage_CardInfo h4 {
+    margin: 0 0 0.4em 0;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: #333;
+}
+
+.SearchPage_CardInfo span {
+    font-size: 0.85em;
+    color: #bbb;
+    font-weight: 600;
+}

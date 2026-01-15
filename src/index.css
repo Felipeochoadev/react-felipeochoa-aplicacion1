@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f8f9fc;
+  /* Fondo moderno desktop */
+  font-size: 16px;
+  color: #333;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Layout Desktop */
+.App_MainLayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.App_ContentArea {
+  flex: 1;
+  background: white;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Responsividad Global */
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 3.5vw;
+  }
+
+  .App_MainLayout {
+    display: block;
+    /* Vuelve a scroll normal móvil */
+  }
+
+  .App_ContentArea:not(.no-nav) {
+    padding-bottom: 7em;
+    /* Espacio para TabBar */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .App_ContentArea {
+    max-width: calc(100% - 280px);
+    margin-left: 280px;
+    padding: 2em;
+    /* Aire alrededor del contenido en desktop */
+    background-color: #f8f9fc;
+  }
+
+  .App_ContentArea>div {
+    background: white;
+    border-radius: 2.5em;
+    min-height: calc(100vh - 4em);
+    box-shadow: 0 1em 4em rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    /* Mantener redondeo */
+  }
+}
+
+.seleccion {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
