@@ -1,0 +1,94 @@
+.HeaderInicio1_contenedor {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2em 1.5em;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.HeaderInicio1_info {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.HeaderInicio1_avatar_marco {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    border: 2px solid #00ccff;
+    overflow: hidden;
+}
+
+.HeaderInicio1_avatar_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.HeaderInicio1_textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderInicio1_saludo {
+    font-size: 0.8em;
+    color: #94a3b8;
+    font-weight: 500;
+    margin: 0;
+}
+
+.HeaderInicio1_nombre {
+    font-size: 1em;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    line-height: 1;
+}
+
+.HeaderInicio1_acciones {
+    display: flex;
+    align-items: center;
+}
+
+.HeaderInicio1_btn_notif {
+    width: 3.5em;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8em;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.HeaderInicio1_btn_notif:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.HeaderInicio1_notif_punto {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    width: 0.6em;
+    height: 0.6em;
+    background-color: #FF073A;
+    border-radius: 50%;
+    border: 1px solid #0a0a0a;
+}
+
+@media screen and (min-width: 1024px) {
+    .HeaderInicio1_contenedor {
+        display: none !important;
+    }
+}

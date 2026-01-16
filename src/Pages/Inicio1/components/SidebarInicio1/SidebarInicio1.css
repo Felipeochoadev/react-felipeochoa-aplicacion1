@@ -1,0 +1,131 @@
+.SidebarInicio1_contenedor {
+    width: 15em;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    position: sticky;
+    top: 0;
+}
+
+.SidebarInicio1_top {
+    margin-bottom: 3em;
+}
+
+.SidebarInicio1_user_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.SidebarInicio1_avatar_marco {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    border: 2px solid #00ccff;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.3);
+}
+
+.SidebarInicio1_avatar_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SidebarInicio1_btn_notif {
+    width: 3em;
+    height: 3em;
+    border-radius: 0.8em;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SidebarInicio1_notif_punto {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    width: 0.5em;
+    height: 0.5em;
+    background: #FF073A;
+    border-radius: 50%;
+    border: 1px solid #0a0a0a;
+}
+
+.SidebarInicio1_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    flex: 1;
+}
+
+.SidebarInicio1_nav_item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    text-decoration: none;
+    color: #64748b;
+    border-radius: 1em;
+    transition: all 0.3s;
+}
+
+.SidebarInicio1_nav_item.activo {
+    background: rgba(0, 204, 255, 0.1);
+    color: #00ccff;
+}
+
+.SidebarInicio1_nav_item:hover:not(.activo) {
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+}
+
+.SidebarInicio1_nav_text {
+    font-weight: 700;
+    font-size: 0.95em;
+}
+
+.SidebarInicio1_bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.SidebarInicio1_fab {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: #00ccff;
+    color: #060606;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 0 25px rgba(0, 204, 255, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.SidebarInicio1_fab:hover {
+    transform: scale(1.1);
+}
+
+.SidebarInicio1_fab .material-symbols-outlined {
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 1023px) {
+    .SidebarInicio1_contenedor {
+        display: none;
+    }
+}@media screen and (min-width: 1024px) { .SidebarInicio1_fab { position: fixed; bottom: 3em; right: 3em; z-index: 1000; width: 4.5em; height: 4.5em; box-shadow: 0 0 30px rgba(0, 204, 255, 0.5); } .SidebarInicio1_bottom { opacity: 0; pointer-events: none; } }

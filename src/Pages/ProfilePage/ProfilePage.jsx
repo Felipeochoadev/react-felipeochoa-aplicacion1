@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DatosSimulados } from '../../Core/Datos';
+import { DatosSimulados } from '../../Core/Core/Datos';
 import { Hexagon, ChevronRight, GraduationCap, FileText, Bell, BarChart2, Info } from 'lucide-react';
 import './ProfilePage.css';
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import TabBar from '../../Shared/TabBar/TabBar';
-import { DatosSimulados } from '../../Core/Datos';
+import { DatosSimulados } from '../../Core/Core/Datos';
 import './QuizPage.css';
 
 const QuizPage = () => {

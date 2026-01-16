@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Bell, Calculator, Atom, Sprout, Book } from 'lucide-react';
-import { DatosSimulados } from '../../Core/Datos';
+import { DatosSimulados } from '../../Core/Core/Datos';
 import './DashboardPage.css';
 
 const DashboardPage = () => {

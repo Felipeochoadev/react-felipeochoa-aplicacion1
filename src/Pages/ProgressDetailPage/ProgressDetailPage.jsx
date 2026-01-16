@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, MoreHorizontal } from 'lucide-react';
 import TabBar from '../../Shared/TabBar/TabBar';
-import { DatosSimulados } from '../../Core/Datos';
+import { DatosSimulados } from '../../Core/Core/Datos';
 import './ProgressDetailPage.css';
 
 const ProgressDetailPage = () => {

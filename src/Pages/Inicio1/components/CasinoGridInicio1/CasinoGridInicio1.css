@@ -1,0 +1,185 @@
+.CasinoGridInicio1_contenedor {
+    padding: 0 1.5em;
+    margin-top: 2em;
+    margin-bottom: 8em;
+}
+
+.CasinoGridInicio1_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.CasinoGridInicio1_titulo_seccion {
+    font-size: 1.25em;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+
+.CasinoGridInicio1_btn_ver_todo {
+    background: transparent;
+    border: none;
+    color: #00ccff;
+    font-weight: 800;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.CasinoGridInicio1_lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.CasinoGridInicio1_card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5em;
+    padding: 1.5em;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.CasinoGridInicio1_card.inactivo {
+    opacity: 0.6;
+}
+
+.CasinoGridInicio1_card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5em;
+}
+
+.CasinoGridInicio1_nombre {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+
+.CasinoGridInicio1_ubicacion {
+    font-size: 0.8em;
+    color: #94a3b8;
+    margin: 0.2em 0 0 0;
+}
+
+.CasinoGridInicio1_badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.3em 0.8em;
+    border-radius: 999px;
+    font-size: 0.7em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.CasinoGridInicio1_badge.activo {
+    background: rgba(57, 255, 20, 0.1);
+    color: #39FF14;
+    border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.CasinoGridInicio1_badge.error {
+    background: rgba(255, 7, 58, 0.1);
+    color: #FF073A;
+    border: 1px solid rgba(255, 7, 58, 0.3);
+}
+
+.CasinoGridInicio1_dot_pulse {
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #39FF14;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+.CasinoGridInicio1_grafico {
+    height: 5em;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.CasinoGridInicio1_svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.sparkline-anim {
+    filter: drop-shadow(0 0 4px rgba(0, 209, 255, 0.5));
+}
+
+.CasinoGridInicio1_info_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CasinoGridInicio1_stats_row {
+    display: flex;
+    gap: 1.5em;
+}
+
+.CasinoGridInicio1_stat_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.CasinoGridInicio1_stat_label {
+    font-size: 0.65em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.CasinoGridInicio1_stat_valor {
+    font-size: 1em;
+    font-weight: 800;
+    color: white;
+}
+
+.CasinoGridInicio1_adjuntos {
+    display: flex;
+    gap: 0.8em;
+}
+
+.CasinoGridInicio1_btn_accion {
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8em;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.CasinoGridInicio1_btn_accion.primario {
+    color: #00ccff;
+}
+
+@media screen and (min-width: 1024px) {
+    .CasinoGridInicio1_lista {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2em !important;
+    }
+
+    .CasinoGridInicio1_contenedor {
+        margin-bottom: 2em !important;
+    }
+
+    .CasinoGridInicio1_grafico {
+        height: 12em !important;
+        display: block !important;
+    }
+}

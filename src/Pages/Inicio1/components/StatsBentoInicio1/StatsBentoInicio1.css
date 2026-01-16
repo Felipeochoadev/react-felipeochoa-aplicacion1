@@ -1,0 +1,50 @@
+.StatsBentoInicio1_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 0 1.5em;
+}
+
+.StatsBentoInicio1_card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.2em;
+    padding: 1.2em;
+}
+
+.StatsBentoInicio1_titulo {
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    font-weight: 800;
+    margin: 0 0 0.5em 0;
+}
+
+.StatsBentoInicio1_valores {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.StatsBentoInicio1_valor {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: white;
+}
+
+.StatsBentoInicio1_tendencia {
+    font-size: 0.7em;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+}
+
+.StatsBentoInicio1_tendencia.positivo {
+    color: #39FF14;
+}
+
+.StatsBentoInicio1_tendencia.negativo {
+    color: #FF073A;
+}

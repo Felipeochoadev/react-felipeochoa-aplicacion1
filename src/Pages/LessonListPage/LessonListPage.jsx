@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Briefcase, ArrowLeft } from 'lucide-react';
-import { DatosSimulados } from '../../Core/Datos';
+import { DatosSimulados } from '../../Core/Core/Datos';
 import './LessonListPage.css';
 
 const LessonListPage = () => {

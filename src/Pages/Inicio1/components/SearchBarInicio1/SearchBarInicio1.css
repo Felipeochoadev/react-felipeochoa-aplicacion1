@@ -1,0 +1,31 @@
+.SearchBarInicio1_contenedor {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.2em;
+    padding: 0.8em 1.2em;
+    margin: 1.5em;
+}
+
+.SearchBarInicio1_icono {
+    color: #94a3b8;
+    margin-right: 0.8em;
+    font-size: 1.5em;
+}
+
+.SearchBarInicio1_input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0.9em;
+    width: 100%;
+    font-family: inherit;
+}
+
+.SearchBarInicio1_input::placeholder {
+    color: #64748b;
+}
