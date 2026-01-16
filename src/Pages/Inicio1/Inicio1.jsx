@@ -37,14 +37,7 @@ const Inicio1 = () => {
     };
 
     const handleGuardarCasino = (nuevoCasino) => {
-        // Validación básica
-        if (!nuevoCasino.nombre || !nuevoCasino.ubicacion || !nuevoCasino.ingresos || !nuevoCasino.jugadores) {
-            addNotification('warning', 'Por favor, completa todos los campos requeridos.');
-            return;
-        }
-
         console.log("Saving new casino:", nuevoCasino);
-
         // Simulamos éxito
         addNotification('success', 'Casino creado con éxito.');
     };
@@ -82,6 +75,7 @@ const Inicio1 = () => {
                 isOpen={mostrarModal}
                 onClose={handleCerrarModal}
                 onSave={handleGuardarCasino}
+                addNotification={addNotification}
             />
 
             <div className="NotificationInicio1_container">

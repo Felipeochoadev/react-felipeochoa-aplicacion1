@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ModalAddCasino.css';
 
-const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
+const ModalAddCasino = ({ isOpen, onClose, onSave, addNotification }) => {
     const [loading, setLoading] = useState(false);
+    const [errores, setErrores] = useState([]);
     const [formData, setFormData] = useState({
         nombre: '',
         ubicacion: '',
@@ -21,6 +22,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                 ingresos: '',
                 jugadores: ''
             });
+            setErrores([]);
             setLoading(false);
         }
     }, [isOpen]);
@@ -30,14 +32,31 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
+
+        // Limpiar error al escribir
+        if (value.trim() !== "") {
+            setErrores(prev => prev.filter(err => err !== name));
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validación manual
-        if (!formData.nombre || !formData.ubicacion || !formData.ingresos || !formData.jugadores) {
-            onSave(formData); // Llamamos a onSave para que el padre muestre el toast
+        const campos = [
+            { id: 'nombre', label: 'Nombre del Casino' },
+            { id: 'ubicacion', label: 'Ubicación' },
+            { id: 'ingresos', label: 'Ingresos' },
+            { id: 'jugadores', label: 'Jugadores' }
+        ];
+
+        const nuevosErrores = campos
+            .filter(campo => !formData[campo.id] || formData[campo.id].trim() === "")
+            .map(campo => campo.id);
+
+        if (nuevosErrores.length > 0) {
+            setErrores(nuevosErrores);
+            const primerCampoFaltante = campos.find(c => nuevosErrores.includes(c.id));
+            addNotification('warning', `El campo "${primerCampoFaltante.label}" es obligatorio.`);
             return;
         }
 
@@ -67,7 +86,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                         <input
                             type="text"
                             name="nombre"
-                            className="ModalAddCasino_input"
+                            className={`ModalAddCasino_input ${errores.includes('nombre') ? 'error' : ''}`}
                             placeholder="Enter casino name"
                             value={formData.nombre}
                             onChange={handleChange}
@@ -79,7 +98,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                         <input
                             type="text"
                             name="ubicacion"
-                            className="ModalAddCasino_input"
+                            className={`ModalAddCasino_input ${errores.includes('ubicacion') ? 'error' : ''}`}
                             placeholder="e.g. Las Vegas, NV"
                             value={formData.ubicacion}
                             onChange={handleChange}
@@ -105,7 +124,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                             <input
                                 type="text"
                                 name="ingresos"
-                                className="ModalAddCasino_input"
+                                className={`ModalAddCasino_input ${errores.includes('ingresos') ? 'error' : ''}`}
                                 placeholder="$0.00"
                                 value={formData.ingresos}
                                 onChange={handleChange}
@@ -116,7 +135,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                             <input
                                 type="text"
                                 name="jugadores"
-                                className="ModalAddCasino_input"
+                                className={`ModalAddCasino_input ${errores.includes('jugadores') ? 'error' : ''}`}
                                 placeholder="0"
                                 value={formData.jugadores}
                                 onChange={handleChange}
