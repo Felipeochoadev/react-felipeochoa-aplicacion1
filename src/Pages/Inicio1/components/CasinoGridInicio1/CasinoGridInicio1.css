@@ -172,6 +172,7 @@
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 2em !important;
+        padding-bottom: 3em !important;
     }
 
     .CasinoGridInicio1_contenedor {

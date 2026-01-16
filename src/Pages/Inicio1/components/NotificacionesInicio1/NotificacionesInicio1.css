@@ -1,0 +1,225 @@
+.NotificacionesInicio1_contenedor {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
+    width: 20em;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2000;
+    margin-top: 0.8em;
+    animation: NotificacionesInicio1_slideDown 0.3s ease;
+}
+
+.NotificacionesInicio1_header {
+    padding: 1.2em 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.NotificacionesInicio1_titulo {
+    font-size: 1em;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+
+.NotificacionesInicio1_btn_cerrar {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.NotificacionesInicio1_btn_cerrar:hover {
+    color: white;
+}
+
+.NotificacionesInicio1_lista {
+    display: flex;
+    flex-direction: column;
+    max-height: 25em;
+    overflow-y: auto;
+}
+
+.NotificacionesInicio1_item {
+    display: flex;
+    gap: 1em;
+    padding: 1.2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.NotificacionesInicio1_item:last-child {
+    border-bottom: none;
+}
+
+.NotificacionesInicio1_item.leido {
+    opacity: 0.5;
+}
+
+.NotificacionesInicio1_icono_area {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.NotificacionesInicio1_icono_area.success {
+    color: #39FF14;
+    background: rgba(57, 255, 20, 0.1);
+}
+
+.NotificacionesInicio1_icono_area.info {
+    color: #00ccff;
+    background: rgba(0, 204, 255, 0.1);
+}
+
+.NotificacionesInicio1_icono_area.warning {
+    color: #ff9f0a;
+    background: rgba(255, 159, 10, 0.1);
+}
+
+.NotificacionesInicio1_icono_area.maintenance {
+    color: #94a3b8;
+    background: rgba(148, 163, 184, 0.1);
+}
+
+.NotificacionesInicio1_contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.NotificacionesInicio1_meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NotificacionesInicio1_tiempo {
+    font-size: 0.7em;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.NotificacionesInicio1_status_dot {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+}
+
+.NotificacionesInicio1_status_dot.success {
+    background: #39FF14;
+}
+
+.NotificacionesInicio1_status_dot.info {
+    background: #00ccff;
+}
+
+.NotificacionesInicio1_status_dot.warning {
+    background: #ff9f0a;
+}
+
+.NotificacionesInicio1_status_dot.maintenance {
+    background: #94a3b8;
+}
+
+.NotificacionesInicio1_desc {
+    font-size: 0.85em;
+    color: #e2e8f0;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.NotificacionesInicio1_btn_leer {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 0.5em;
+    color: #00ccff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 0.4em 0.8em;
+    margin-top: 0.5em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.NotificacionesInicio1_btn_leer:hover {
+    background: rgba(0, 204, 255, 0.15);
+}
+
+.NotificacionesInicio1_vacio {
+    padding: 2.5em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+    color: #64748b;
+}
+
+.NotificacionesInicio1_footer {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.NotificacionesInicio1_btn_ver_mas {
+    background: transparent;
+    border: none;
+    color: #00ccff;
+    font-size: 0.85em;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0.5em 1em;
+    border-radius: 0.6em;
+}
+
+.NotificacionesInicio1_btn_ver_mas:hover {
+    background: rgba(0, 204, 255, 0.1);
+    letter-spacing: 0.5px;
+}
+
+@keyframes NotificacionesInicio1_slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media screen and (max-width: 1023px) {
+    .NotificacionesInicio1_contenedor {
+        position: fixed;
+        /* Se mantiene sticky con el header */
+        top: 5.5em;
+        /* Debajo del header alto */
+        left: 0.5em;
+        right: 0.5em;
+        width: calc(100% - 1em);
+        margin: 0;
+    }
+}

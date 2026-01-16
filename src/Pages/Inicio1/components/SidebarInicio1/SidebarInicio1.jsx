@@ -1,7 +1,8 @@
 import React from 'react';
+import NotificacionesInicio1 from '../NotificacionesInicio1/NotificacionesInicio1';
 import './SidebarInicio1.css';
 
-const SidebarInicio1 = ({ usuario, navegacion }) => {
+const SidebarInicio1 = ({ usuario, navegacion, onNotifClick, isNotifOpen, onMarkAsRead, onSeeMore }) => {
     return (
         <aside id="SidebarInicio1" className="SidebarInicio1_contenedor">
             <div className="SidebarInicio1_top">
@@ -9,10 +10,24 @@ const SidebarInicio1 = ({ usuario, navegacion }) => {
                     <div className="SidebarInicio1_avatar_marco">
                         <img src={usuario.avatar} alt="User" className="SidebarInicio1_avatar_img" />
                     </div>
-                    <button className="SidebarInicio1_btn_notif seleccion">
-                        <span className="material-symbols-outlined">notifications</span>
-                        <span className="SidebarInicio1_notif_punto"></span>
-                    </button>
+                    <div className="SidebarInicio1_notif_wrapper">
+                        <button className="SidebarInicio1_btn_notif seleccion" onClick={onNotifClick}>
+                            <span className="material-symbols-outlined">notifications</span>
+                            {usuario.notificaciones > 0 && (
+                                <span className="SidebarInicio1_notif_badge">
+                                    {usuario.notificaciones > 9 ? '9+' : usuario.notificaciones}
+                                </span>
+                            )}
+                        </button>
+
+                        <NotificacionesInicio1
+                            isOpen={isNotifOpen}
+                            onClose={onNotifClick}
+                            notificaciones={usuario.lista}
+                            onMarkAsRead={onMarkAsRead}
+                            onSeeMore={onSeeMore}
+                        />
+                    </div>
                 </div>
             </div>
 

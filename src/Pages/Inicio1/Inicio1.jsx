@@ -7,6 +7,7 @@ import SidebarInicio1 from './components/SidebarInicio1/SidebarInicio1';
 import BottomNavInicio1 from './components/BottomNavInicio1/BottomNavInicio1';
 import ModalAddCasino from './components/ModalAddCasino/ModalAddCasino';
 import NotificationInicio1 from './components/NotificationInicio1/NotificationInicio1';
+import LoadingInicio1 from './components/LoadingInicio1/LoadingInicio1';
 import './Inicio1.css';
 import { Inicio1Consumo } from './core/Consumo';
 
@@ -14,6 +15,9 @@ const Inicio1 = () => {
     const [datos, setDatos] = useState(null);
     const [mostrarModal, setMostrarModal] = useState(false);
     const [notificaciones, setNotificaciones] = useState([]);
+    const [isRefreshing, setIsRefreshing] = useState(false);
+    const [loadingMessage, setLoadingMessage] = useState("Actualizando ");
+    const [mostrarNotif, setMostrarNotif] = useState(false);
     useEffect(() => {
         const cargarDatos = async () => {
             const result = await Inicio1Consumo.obtenerDatosVista();
@@ -22,7 +26,7 @@ const Inicio1 = () => {
         cargarDatos();
     }, []);
 
-    if (!datos) return <div className="Inicio1_loading">Loading Dashboard...</div>;
+    if (!datos) return <LoadingInicio1 mensaje="Cargando " />;
 
     const handleAbrirModal = () => setMostrarModal(true);
     const handleCerrarModal = () => setMostrarModal(false);
@@ -42,19 +46,68 @@ const Inicio1 = () => {
         addNotification('success', 'Casino creado con éxito.');
     };
 
+
+    const handleRefresh = async (mensaje = "Actualizando ") => {
+        setLoadingMessage(mensaje);
+        setIsRefreshing(true);
+        try {
+            const result = await Inicio1Consumo.obtenerDatosVista();
+            setDatos(result);
+            addNotification('success', 'Datos actualizados correctamente.');
+        } catch (error) {
+            addNotification('error', 'Error al actualizar los datos.');
+        } finally {
+            setIsRefreshing(false);
+        }
+    };
+
+    const handleToggleNotif = () => setMostrarNotif(!mostrarNotif);
+
+    const handleMarcarLeida = (id) => {
+        setDatos(prev => {
+            const nuevaLista = prev.usuario.lista.map(n =>
+                n.id === id ? { ...n, leido: true } : n
+            );
+            const nuevasNotif = nuevaLista.filter(n => !n.leido).length;
+            return {
+                ...prev,
+                usuario: {
+                    ...prev.usuario,
+                    lista: nuevaLista,
+                    notificaciones: nuevasNotif
+                }
+            };
+        });
+    };
+
+    const handleSeeMore = () => {
+        handleRefresh();
+        setMostrarNotif(false);
+    };
+
     return (
         <div id="Inicio1" className="Inicio1_page_contenedor">
             <SidebarInicio1
                 usuario={datos.usuario}
                 navegacion={datos.navegacion}
                 onAbrirModal={handleAbrirModal}
+                onNotifClick={handleToggleNotif}
+                isNotifOpen={mostrarNotif}
+                onMarkAsRead={handleMarcarLeida}
+                onSeeMore={handleSeeMore}
             />
             <div className="Inicio1_main_wrapper">
-                <HeaderInicio1 usuario={datos.usuario} />
+                <HeaderInicio1
+                    usuario={datos.usuario}
+                    onNotifClick={handleToggleNotif}
+                    isNotifOpen={mostrarNotif}
+                    onMarkAsRead={handleMarcarLeida}
+                    onSeeMore={handleSeeMore}
+                />
                 <main className="Inicio1_main_content">
                     <SearchBarInicio1 />
                     <StatsBentoInicio1 estadisticas={datos.estadisticas} />
-                    <CasinoGridInicio1 casinos={datos.casinos} />
+                    <CasinoGridInicio1 casinos={datos.casinos} onRefresh={handleRefresh} />
                 </main>
             </div>
             <BottomNavInicio1
@@ -88,6 +141,8 @@ const Inicio1 = () => {
                     />
                 ))}
             </div>
+
+            {isRefreshing && <LoadingInicio1 mensaje={loadingMessage} />}
         </div>
     );
 };

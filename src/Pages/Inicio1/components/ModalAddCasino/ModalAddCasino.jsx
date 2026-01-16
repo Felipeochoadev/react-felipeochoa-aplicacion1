@@ -105,6 +105,18 @@ const ModalAddCasino = ({ isOpen, onClose, onSave, addNotification }) => {
                         />
                     </div>
 
+                    <div className="ModalAddCasino_campo">
+                        <label className="ModalAddCasino_label">Status</label>
+                        <select
+                            name="estado"
+                            className="ModalAddCasino_input"
+                            value={formData.estado}
+                            onChange={handleChange}
+                        >
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
 
                     <div className="ModalAddCasino_stats_row">
                         <div className="ModalAddCasino_campo">

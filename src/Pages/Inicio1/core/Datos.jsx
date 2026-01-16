@@ -2,7 +2,42 @@ export const Inicio1Datos = {
     usuario: {
         nombre: "Felipe Ochoa",
         saludo: "Welcome back,",
-        avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuC8R6XNLrf2yXyYRZF6S4hIGSAaJwNxXxyNX8Q7i3TSKE-UzP6kIo08w34DJ3MfqXJ-_j0WUgdKnnJBcffoTyuYAe_RDpEgirNda-KJXURwqA6o6T3z8kSaLkI85xoORS6PigXB6GgB_bOavrn2IxtH2w5vQR4G2KAKw9SZ3OmWutoYVHirvrFWFtJiVJ8vPyiipjdr0LZir2s2DgWwYet7-M1QyVo8YqGNY46raeD_FYq72Vj1UmuzFRpfjcK_6cmKgBvnepTHOAY3"
+        avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuC8R6XNLrf2yXyYRZF6S4hIGSAaJwNxXxyNX8Q7i3TSKE-UzP6kIo08w34DJ3MfqXJ-_j0WUgdKnnJBcffoTyuYAe_RDpEgirNda-KJXURwqA6o6T3z8kSaLkI85xoORS6PigXB6GgB_bOavrn2IxtH2w5vQR4G2KAKw9SZ3OmWutoYVHirvrFWFtJiVJ8vPyiipjdr0LZir2s2DgWwYet7-M1QyVo8YqGNY46raeD_FYq72Vj1UmuzFRpfjcK_6cmKgBvnepTHOAY3",
+        notificaciones: 4,
+        lista: [
+            {
+                id: 1,
+                tipo: "success",
+                icono: "check_circle",
+                tiempo: "2 min ago",
+                descripcion: "New casino 'Golden Nugget' created successfully.",
+                leido: false
+            },
+            {
+                id: 2,
+                tipo: "info",
+                icono: "info",
+                tiempo: "1 hour ago",
+                descripcion: "System report generated for Q1.",
+                leido: false
+            },
+            {
+                id: 3,
+                tipo: "warning",
+                icono: "warning",
+                tiempo: "3 hours ago",
+                descripcion: "Low revenue alert for 'Grand Plaza Casino'.",
+                leido: false
+            },
+            {
+                id: 4,
+                tipo: "maintenance",
+                icono: "build",
+                tiempo: "5 hours ago",
+                descripcion: "Scheduled maintenance tomorrow at 2 AM.",
+                leido: false
+            }
+        ]
     },
     estadisticas: [
         { id: "casinos", titulo: "Active Casinos", valor: "24", tendencia: "+2%", esPositiva: true },

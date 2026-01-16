@@ -1,7 +1,8 @@
 import React from 'react';
+import NotificacionesInicio1 from '../NotificacionesInicio1/NotificacionesInicio1';
 import './HeaderInicio1.css';
 
-const HeaderInicio1 = ({ usuario }) => {
+const HeaderInicio1 = ({ usuario, onNotifClick, isNotifOpen, onMarkAsRead, onSeeMore }) => {
     return (
         <header id="HeaderInicio1" className="HeaderInicio1_contenedor">
             <div className="HeaderInicio1_info">
@@ -18,10 +19,22 @@ const HeaderInicio1 = ({ usuario }) => {
                 </div>
             </div>
             <div className="HeaderInicio1_acciones">
-                <button className="HeaderInicio1_btn_notif seleccion">
+                <button className="HeaderInicio1_btn_notif seleccion" onClick={onNotifClick}>
                     <span className="material-symbols-outlined">notifications</span>
-                    <span className="HeaderInicio1_notif_punto"></span>
+                    {usuario.notificaciones > 0 && (
+                        <span className="HeaderInicio1_notif_badge">
+                            {usuario.notificaciones > 9 ? '9+' : usuario.notificaciones}
+                        </span>
+                    )}
                 </button>
+
+                <NotificacionesInicio1
+                    isOpen={isNotifOpen}
+                    onClose={onNotifClick}
+                    notificaciones={usuario.lista}
+                    onMarkAsRead={onMarkAsRead}
+                    onSeeMore={onSeeMore}
+                />
             </div>
         </header>
     );

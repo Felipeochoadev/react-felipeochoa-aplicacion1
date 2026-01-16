@@ -50,4 +50,39 @@
     .Inicio1_page_contenedor {
         font-size: 3.5vw;
     }
-}.Inicio1_fab_desktop { display: none; } @media screen and (min-width: 1024px) { .Inicio1_fab_desktop { display: flex; position: fixed; bottom: 3.5em; right: 3.5em; z-index: 1000; width: 4.5em; height: 4.5em; background: #00ccff; color: #060606; border-radius: 50%; align-items: center; justify-content: center; border: none; box-shadow: 0 0 30px rgba(0, 204, 255, 0.5); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } .Inicio1_fab_desktop:hover { transform: scale(1.1); box-shadow: 0 0 40px rgba(0, 204, 255, 0.7); } .Inicio1_fab_desktop .material-symbols-outlined { font-size: 2.5em; font-weight: 800; } }
+}
+
+.Inicio1_fab_desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .Inicio1_fab_desktop {
+        display: flex;
+        position: fixed;
+        bottom: 1em;
+        right: 2em;
+        z-index: 1000;
+        width: 4.5em;
+        height: 4.5em;
+        background: #00ccff;
+        color: #060606;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        box-shadow: 0 0 30px rgba(0, 204, 255, 0.5);
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .Inicio1_fab_desktop:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px rgba(0, 204, 255, 0.7);
+    }
+
+    .Inicio1_fab_desktop .material-symbols-outlined {
+        font-size: 2.5em;
+        font-weight: 800;
+    }
+}

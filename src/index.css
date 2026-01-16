@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
   background-color: #f8f9fc;
   /* Fondo moderno desktop */
-  font-size: 16px;
+  font-size: 1vw;
   color: #333;
   font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;

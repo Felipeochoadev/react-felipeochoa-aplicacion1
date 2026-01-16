@@ -10,6 +10,7 @@
     padding: 2em 1em;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .SidebarInicio1_top {
@@ -37,6 +38,10 @@
     object-fit: cover;
 }
 
+.SidebarInicio1_notif_wrapper {
+    position: relative;
+}
+
 .SidebarInicio1_btn_notif {
     width: 3em;
     height: 3em;
@@ -50,15 +55,21 @@
     justify-content: center;
 }
 
-.SidebarInicio1_notif_punto {
+.SidebarInicio1_notif_badge {
     position: absolute;
-    top: 0.8em;
-    right: 0.8em;
-    width: 0.5em;
-    height: 0.5em;
-    background: #FF073A;
-    border-radius: 50%;
-    border: 1px solid #0a0a0a;
+    top: -0.5em;
+    right: -0.5em;
+    min-width: 1.5em;
+    height: 1.5em;
+    background-color: #FF073A;
+    border-radius: 999px;
+    color: white;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em;
+    box-shadow: 0 0 10px rgba(255, 7, 58, 0.4);
 }
 
 .SidebarInicio1_nav {
@@ -128,4 +139,21 @@
     .SidebarInicio1_contenedor {
         display: none;
     }
-}@media screen and (min-width: 1024px) { .SidebarInicio1_fab { position: fixed; bottom: 3em; right: 3em; z-index: 1000; width: 4.5em; height: 4.5em; box-shadow: 0 0 30px rgba(0, 204, 255, 0.5); } .SidebarInicio1_bottom { opacity: 0; pointer-events: none; } }
+}
+
+@media screen and (min-width: 1024px) {
+    .SidebarInicio1_fab {
+        position: fixed;
+        bottom: 3em;
+        right: 3em;
+        z-index: 1000;
+        width: 4.5em;
+        height: 4.5em;
+        box-shadow: 0 0 30px rgba(0, 204, 255, 0.5);
+    }
+
+    .SidebarInicio1_bottom {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
