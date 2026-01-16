@@ -34,6 +34,13 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Validación manual
+        if (!formData.nombre || !formData.ubicacion || !formData.ingresos || !formData.jugadores) {
+            onSave(formData); // Llamamos a onSave para que el padre muestre el toast
+            return;
+        }
+
         setLoading(true);
 
         // Simulación de carga de red
@@ -64,7 +71,6 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                             placeholder="Enter casino name"
                             value={formData.nombre}
                             onChange={handleChange}
-                            required
                         />
                     </div>
 
@@ -77,7 +83,6 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                             placeholder="e.g. Las Vegas, NV"
                             value={formData.ubicacion}
                             onChange={handleChange}
-                            required
                         />
                     </div>
 
@@ -104,7 +109,6 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                                 placeholder="$0.00"
                                 value={formData.ingresos}
                                 onChange={handleChange}
-                                required
                             />
                         </div>
                         <div className="ModalAddCasino_campo">
@@ -116,7 +120,6 @@ const ModalAddCasino = ({ isOpen, onClose, onSave }) => {
                                 placeholder="0"
                                 value={formData.jugadores}
                                 onChange={handleChange}
-                                required
                             />
                         </div>
                     </div>

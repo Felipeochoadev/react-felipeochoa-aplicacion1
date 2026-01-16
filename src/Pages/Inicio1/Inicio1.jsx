@@ -38,15 +38,15 @@ const Inicio1 = () => {
 
     const handleGuardarCasino = (nuevoCasino) => {
         // Validación básica
-        if (!nuevoCasino.nombre || !nuevoCasino.ubicacion) {
-            addNotification('warning', 'Please fill in the required fields.');
+        if (!nuevoCasino.nombre || !nuevoCasino.ubicacion || !nuevoCasino.ingresos || !nuevoCasino.jugadores) {
+            addNotification('warning', 'Por favor, completa todos los campos requeridos.');
             return;
         }
 
         console.log("Saving new casino:", nuevoCasino);
 
         // Simulamos éxito
-        addNotification('success', 'Casino created successfully.');
+        addNotification('success', 'Casino creado con éxito.');
     };
 
     return (
