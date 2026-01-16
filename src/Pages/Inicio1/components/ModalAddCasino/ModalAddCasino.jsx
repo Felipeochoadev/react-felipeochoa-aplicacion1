@@ -80,7 +80,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave, addNotification }) => {
                     </button>
                 </div>
 
-                <form className="ModalAddCasino_form" onSubmit={handleSubmit}>
+                <form className="ModalAddCasino_form" onSubmit={handleSubmit} autocomplete="off">
                     <div className="ModalAddCasino_campo">
                         <label className="ModalAddCasino_label">Casino Name</label>
                         <input
@@ -105,18 +105,6 @@ const ModalAddCasino = ({ isOpen, onClose, onSave, addNotification }) => {
                         />
                     </div>
 
-                    <div className="ModalAddCasino_campo">
-                        <label className="ModalAddCasino_label">Status</label>
-                        <select
-                            name="estado"
-                            className="ModalAddCasino_input ModalAddCasino_select"
-                            value={formData.estado}
-                            onChange={handleChange}
-                        >
-                            <option value="Active">Active</option>
-                            <option value="Inactive">Inactive</option>
-                        </select>
-                    </div>
 
                     <div className="ModalAddCasino_stats_row">
                         <div className="ModalAddCasino_campo">
