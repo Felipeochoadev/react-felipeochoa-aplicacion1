@@ -14,7 +14,7 @@ const BottomNavInicio1 = ({ navegacion, onAbrirModal }) => {
             <div className="BottomNavInicio1_items">
                 {itemsIzquierda.map((item) => (
                     <a key={item.id} className={`BottomNavInicio1_item ${item.id === 'casinos' ? 'activo' : ''}`} href={item.href}>
-                        <span className="material-symbols-outlined">{item.icono}</span>
+                        {item.icono}
                         <span className="BottomNavInicio1_item_text">{item.label}</span>
                     </a>
                 ))}
@@ -22,14 +22,14 @@ const BottomNavInicio1 = ({ navegacion, onAbrirModal }) => {
                 {fabItem && (
                     <div className="BottomNavInicio1_fab_container">
                         <button className="BottomNavInicio1_fab seleccion" onClick={onAbrirModal}>
-                            <span className="material-symbols-outlined">{fabItem.icono}</span>
+                            {fabItem.icono}
                         </button>
                     </div>
                 )}
 
                 {itemsDerecha.map((item) => (
                     <a key={item.id} className="BottomNavInicio1_item" href={item.href}>
-                        <span className="material-symbols-outlined">{item.icono}</span>
+                        {item.icono}
                         <span className="BottomNavInicio1_item_text">{item.label}</span>
                     </a>
                 ))}

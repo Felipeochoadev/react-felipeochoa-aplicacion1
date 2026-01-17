@@ -1,6 +1,6 @@
 .SidebarInicio1_contenedor {
     width: 15em;
-    height: 100vh;
+    height: 100%;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -130,10 +130,7 @@
     transform: scale(1.1);
 }
 
-.SidebarInicio1_fab .material-symbols-outlined {
-    font-size: 2.2em;
-    font-weight: 800;
-}
+
 
 @media screen and (max-width: 1023px) {
     .SidebarInicio1_contenedor {

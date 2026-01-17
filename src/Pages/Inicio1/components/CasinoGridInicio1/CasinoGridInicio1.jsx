@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts';
+import { IconoEditSquare } from '../Iconos/IconoEditSquare';
+import { IconoOpenInFull } from '../Iconos/IconoOpenInFull';
 import './CasinoGridInicio1.css';
 
 const CasinoGridChart = ({ casino }) => {
@@ -145,10 +147,10 @@ const CasinoGridInicio1 = ({ casinos, onRefresh }) => {
                             </div>
                             <div className="CasinoGridInicio1_adjuntos">
                                 <button className="CasinoGridInicio1_btn_accion seleccion">
-                                    <span className="material-symbols-outlined">edit_square</span>
+                                    <IconoEditSquare />
                                 </button>
                                 <button className="CasinoGridInicio1_btn_accion primario seleccion">
-                                    <span className="material-symbols-outlined">open_in_full</span>
+                                    <IconoOpenInFull />
                                 </button>
                             </div>
                         </div>

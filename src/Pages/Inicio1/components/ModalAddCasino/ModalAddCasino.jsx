@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { IconoClose } from '../Iconos/IconoClose';
 import './ModalAddCasino.css';
 
 const ModalAddCasino = ({ isOpen, onClose, onSave, addNotification }) => {
@@ -76,7 +77,7 @@ const ModalAddCasino = ({ isOpen, onClose, onSave, addNotification }) => {
                 <div className="ModalAddCasino_header">
                     <h2 className="ModalAddCasino_titulo">Add New Casino</h2>
                     <button className="ModalAddCasino_btn_cerrar" onClick={onClose}>
-                        <span className="material-symbols-outlined">close</span>
+                        <IconoClose />
                     </button>
                 </div>
 

@@ -120,7 +120,7 @@ const Inicio1 = () => {
                     className="Inicio1_fab_desktop seleccion"
                     onClick={handleAbrirModal}
                 >
-                    <span className="material-symbols-outlined">{fab.icono}</span>
+                    {fab.icono}
                 </button>
             ))}
 

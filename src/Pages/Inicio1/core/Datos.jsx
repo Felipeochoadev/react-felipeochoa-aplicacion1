@@ -1,3 +1,13 @@
+import { IconoCheckCircle } from '../components/Iconos/IconoCheckCircle';
+import { IconoInfo } from '../components/Iconos/IconoInfo';
+import { IconoWarning } from '../components/Iconos/IconoWarning';
+import { IconoBuild } from '../components/Iconos/IconoBuild';
+import { IconoDashboard } from '../components/Iconos/IconoDashboard';
+import { IconoCasino } from '../components/Iconos/IconoCasino';
+import { IconoAdd } from '../components/Iconos/IconoAdd';
+import { IconoPayments } from '../components/Iconos/IconoPayments';
+import { IconoGroup } from '../components/Iconos/IconoGroup';
+
 export const Inicio1Datos = {
     usuario: {
         nombre: "Felipe Ochoa",
@@ -8,7 +18,7 @@ export const Inicio1Datos = {
             {
                 id: 1,
                 tipo: "success",
-                icono: "check_circle",
+                icono: <IconoCheckCircle />,
                 tiempo: "2 min ago",
                 descripcion: "New casino 'Golden Nugget' created successfully.",
                 leido: false
@@ -16,7 +26,7 @@ export const Inicio1Datos = {
             {
                 id: 2,
                 tipo: "info",
-                icono: "info",
+                icono: <IconoInfo />,
                 tiempo: "1 hour ago",
                 descripcion: "System report generated for Q1.",
                 leido: false
@@ -24,7 +34,7 @@ export const Inicio1Datos = {
             {
                 id: 3,
                 tipo: "warning",
-                icono: "warning",
+                icono: <IconoWarning />,
                 tiempo: "3 hours ago",
                 descripcion: "Low revenue alert for 'Grand Plaza Casino'.",
                 leido: false
@@ -32,7 +42,7 @@ export const Inicio1Datos = {
             {
                 id: 4,
                 tipo: "maintenance",
-                icono: "build",
+                icono: <IconoBuild />,
                 tiempo: "5 hours ago",
                 descripcion: "Scheduled maintenance tomorrow at 2 AM.",
                 leido: false
@@ -90,10 +100,10 @@ export const Inicio1Datos = {
         }
     ],
     navegacion: [
-        { id: "casinos", label: "Casinos", icono: "dashboard", href: "#casinos" },
-        { id: "machines", label: "Maquinas", icono: "casino", href: "#machines" },
-        { id: "add", label: "Agregar", icono: "add", href: "#add", esPrincipal: true },
-        { id: "liquidation", label: "Liquidacion", icono: "payments", href: "#liquidation" },
-        { id: "users", label: "Usuarios", icono: "group", href: "#users" }
+        { id: "casinos", label: "Casinos", icono: <IconoDashboard />, href: "#casinos" },
+        { id: "machines", label: "Maquinas", icono: <IconoCasino />, href: "#machines" },
+        { id: "add", label: "Agregar", icono: <IconoAdd />, href: "#add", esPrincipal: true },
+        { id: "liquidation", label: "Liquidacion", icono: <IconoPayments />, href: "#liquidation" },
+        { id: "users", label: "Usuarios", icono: <IconoGroup />, href: "#users" }
     ]
 };

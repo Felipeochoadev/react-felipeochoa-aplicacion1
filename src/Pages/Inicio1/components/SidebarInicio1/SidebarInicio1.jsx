@@ -1,5 +1,6 @@
 import React from 'react';
 import NotificacionesInicio1 from '../NotificacionesInicio1/NotificacionesInicio1';
+import { IconoNotifications } from '../Iconos/IconoNotifications';
 import './SidebarInicio1.css';
 
 const SidebarInicio1 = ({ usuario, navegacion, onNotifClick, isNotifOpen, onMarkAsRead, onSeeMore }) => {
@@ -12,7 +13,7 @@ const SidebarInicio1 = ({ usuario, navegacion, onNotifClick, isNotifOpen, onMark
                     </div>
                     <div className="SidebarInicio1_notif_wrapper">
                         <button className="SidebarInicio1_btn_notif seleccion" onClick={onNotifClick}>
-                            <span className="material-symbols-outlined">notifications</span>
+                            <IconoNotifications />
                             {usuario.notificaciones > 0 && (
                                 <span className="SidebarInicio1_notif_badge">
                                     {usuario.notificaciones > 9 ? '9+' : usuario.notificaciones}
@@ -34,7 +35,7 @@ const SidebarInicio1 = ({ usuario, navegacion, onNotifClick, isNotifOpen, onMark
             <nav className="SidebarInicio1_nav">
                 {navegacion.filter(item => !item.esPrincipal).map((item) => (
                     <a key={item.id} href={item.href} className={`SidebarInicio1_nav_item ${item.id === 'casinos' ? 'activo' : ''}`}>
-                        <span className="material-symbols-outlined">{item.icono}</span>
+                        {item.icono}
                         <span className="SidebarInicio1_nav_text">{item.label}</span>
                     </a>
                 ))}

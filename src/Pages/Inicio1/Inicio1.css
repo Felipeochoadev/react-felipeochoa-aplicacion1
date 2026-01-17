@@ -1,21 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
-
 .Inicio1_page_contenedor {
-    height: 100vh;
-    overflow: hidden;
-    background-color: #0a0a0a !important;
-    color: white;
+    height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    font-family: system-ui;
+    background: #0a0a0a;
+    color: white;
     display: flex;
-    flex-direction: row;
-    /* Horizontal para Sidebar */
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: 'Manrope', sans-serif !important;
+    position: fixed;
 }
 
 .Inicio1_main_wrapper {
@@ -42,47 +32,40 @@
     font-weight: 800;
 }
 
-#Inicio1 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+
+/* Desktop First Styles (Default) */
+.Inicio1_fab_desktop {
+    display: flex;
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+    z-index: 1000;
+    width: 4.5em;
+    height: 4.5em;
+    background: #00ccff;
+    color: #060606;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 204, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.Inicio1_fab_desktop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 204, 255, 0.7);
+}
+
+/* Mobile Media Query */
 @media screen and (min-width: 0px) and (max-width: 575px) {
     .Inicio1_page_contenedor {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
-}
 
-.Inicio1_fab_desktop {
-    display: none;
-}
-
-@media screen and (min-width: 1024px) {
     .Inicio1_fab_desktop {
-        display: flex;
-        position: fixed;
-        bottom: 1em;
-        right: 2em;
-        z-index: 1000;
-        width: 4.5em;
-        height: 4.5em;
-        background: #00ccff;
-        color: #060606;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        box-shadow: 0 0 30px rgba(0, 204, 255, 0.5);
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .Inicio1_fab_desktop:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 40px rgba(0, 204, 255, 0.7);
-    }
-
-    .Inicio1_fab_desktop .material-symbols-outlined {
-        font-size: 2.5em;
-        font-weight: 800;
+        display: none;
     }
 }

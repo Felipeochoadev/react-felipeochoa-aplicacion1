@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './NotificacionesInicio1.css';
+import { IconoClose } from '../Iconos/IconoClose';
+import { IconoNotificationsOff } from '../Iconos/IconoNotificationsOff';
 
 const NotificacionesInicio1 = ({ isOpen, onClose, notificaciones, onMarkAsRead, onSeeMore }) => {
     const containerRef = useRef(null);
@@ -27,7 +29,7 @@ const NotificacionesInicio1 = ({ isOpen, onClose, notificaciones, onMarkAsRead, 
             <div className="NotificacionesInicio1_header">
                 <h3 className="NotificacionesInicio1_titulo">Notifications</h3>
                 <button className="NotificacionesInicio1_btn_cerrar" onClick={onClose}>
-                    <span className="material-symbols-outlined">close</span>
+                    <IconoClose />
                 </button>
             </div>
 
@@ -37,7 +39,7 @@ const NotificacionesInicio1 = ({ isOpen, onClose, notificaciones, onMarkAsRead, 
                         {notificacionesLimitadas.map((notif) => (
                             <div key={notif.id} className={`NotificacionesInicio1_item ${notif.leido ? 'leido' : ''}`}>
                                 <div className={`NotificacionesInicio1_icono_area ${notif.tipo}`}>
-                                    <span className="material-symbols-outlined">{notif.icono}</span>
+                                    {notif.icono}
                                 </div>
                                 <div className="NotificacionesInicio1_contenido">
                                     <div className="NotificacionesInicio1_meta">
@@ -69,7 +71,7 @@ const NotificacionesInicio1 = ({ isOpen, onClose, notificaciones, onMarkAsRead, 
                 </>
             ) : (
                 <div className="NotificacionesInicio1_vacio">
-                    <span className="material-symbols-outlined">notifications_off</span>
+                    <IconoNotificationsOff />
                     <p>No new notifications</p>
                 </div>
             )}

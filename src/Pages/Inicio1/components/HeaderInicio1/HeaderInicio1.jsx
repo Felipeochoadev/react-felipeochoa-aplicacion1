@@ -1,5 +1,6 @@
 import React from 'react';
 import NotificacionesInicio1 from '../NotificacionesInicio1/NotificacionesInicio1';
+import { IconoNotifications } from '../Iconos/IconoNotifications';
 import './HeaderInicio1.css';
 
 const HeaderInicio1 = ({ usuario, onNotifClick, isNotifOpen, onMarkAsRead, onSeeMore }) => {
@@ -20,7 +21,7 @@ const HeaderInicio1 = ({ usuario, onNotifClick, isNotifOpen, onMarkAsRead, onSee
             </div>
             <div className="HeaderInicio1_acciones">
                 <button className="HeaderInicio1_btn_notif seleccion" onClick={onNotifClick}>
-                    <span className="material-symbols-outlined">notifications</span>
+                    <IconoNotifications />
                     {usuario.notificaciones > 0 && (
                         <span className="HeaderInicio1_notif_badge">
                             {usuario.notificaciones > 9 ? '9+' : usuario.notificaciones}
